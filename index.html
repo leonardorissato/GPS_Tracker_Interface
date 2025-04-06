@@ -15,11 +15,12 @@
     <div class="iconstatus">
       <img id="network_icon" src="./network_off.png" />
       <img id="gps_icon" src="./gps_off.png" />
+      <h id="lastupdate">Last Update</h>
+      <div class="batteryindicator">
+        <img src="./battery.png" />
+        <label id="batteryvoltage">--V</label>
+      </div>
     </div>
-
-    <img class="settingsbutton" onclick="settingsclick()" src="./capybara.png" />
-
-    <h id="lastupdate">Last Update</h>
 
     <div id="map"></div>
     <div class="timeframeselector">
@@ -30,14 +31,14 @@
       <button onclick="setTimeFrameOffset(72)">72h</button>
     </div>
 
-    <div class="batteryindicator">
-      <img src="./battery.png" />
-      <label id="batteryvoltage">--V</label>
-    </div>
-
     <div id="settingswrapper">
       <input type="text" id="settingstextinput" />
       <button onclick="settingssubmited()">Save</button>
+    </div>
+
+    <div class="bottombuttons">
+      <img class="settingsbutton" onclick="settingsclick()" src="./capybara.png" />
+      <img class="googlemapsbutton" onclick="googlemapsclick()" src="./googlemaps.png" />
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>

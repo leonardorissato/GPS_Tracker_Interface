@@ -309,3 +309,9 @@ function updateIconsAndText() {
   let batterytext = isNaN(parseInt(bridgeDBValues.batterylevel)) ? "Charging" : String((parseInt(bridgeDBValues.batterylevel) / 1000).toFixed(1)) + "V";
   document.getElementById("batteryvoltage").innerText = batterytext;
 }
+
+function googlemapsclick() {
+  console.log("clicked on google maps");
+  //https://www.google.com/maps/search/?api=1&query=36.26577,-92.54324
+  window.open("https://www.google.com/maps/search/?api=1&query=" + bikePosition.lat + "," + bikePosition.lon);
+}
